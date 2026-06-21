@@ -4,6 +4,8 @@ import com.nexushr.entity.Employee;
 import com.nexushr.repository.EmployeeRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class EmployeeService {
 
@@ -15,5 +17,9 @@ public class EmployeeService {
 
     public Employee addEmployee(Employee employee) {
         return employeeRepository.save(employee);
+    }
+
+    public List<Employee> getAllEmployees() {
+        return employeeRepository.findAll();
     }
 }
