@@ -1,5 +1,6 @@
 package com.nexushr.controller;
 
+import com.nexushr.dto.LoginRequest;
 import com.nexushr.dto.RegisterRequest;
 import com.nexushr.entity.User;
 import com.nexushr.service.UserService;
@@ -18,5 +19,13 @@ public class AuthController {
     @PostMapping("/register")
     public User register(@RequestBody RegisterRequest request) {
         return userService.register(request);
+    }
+
+    @PostMapping("/login")
+    public User login(@RequestBody LoginRequest request) {
+        return userService.login(
+                request.getEmail(),
+                request.getPassword()
+        );
     }
 }
