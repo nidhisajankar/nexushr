@@ -20,6 +20,7 @@ public class SecurityConfig {
                         .requestMatchers("/employees/**").permitAll()
                         .requestMatchers("/departments/**").permitAll()
                         .requestMatchers("/attendance/**").permitAll()
+                        .requestMatchers("/leaves/**").permitAll()
                         .anyRequest().authenticated()
                 );
 
