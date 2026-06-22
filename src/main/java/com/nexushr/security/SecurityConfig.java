@@ -21,6 +21,7 @@ public class SecurityConfig {
                         .requestMatchers("/departments/**").permitAll()
                         .requestMatchers("/attendance/**").permitAll()
                         .requestMatchers("/leaves/**").permitAll()
+                        .requestMatchers("/dashboard/**").permitAll()
                         .anyRequest().authenticated()
                 );
 
