@@ -63,4 +63,12 @@ export const addAttendance = (attendance: any) =>
 export const deleteAttendance = (id: number) =>
   API.delete(`/attendance/${id}`);
 
+  // ==================== Authentication ====================
+
+  export const registerUser = (user: any) =>
+    API.post("/auth/register", user);
+
+  export const loginUser = (user: any) =>
+    API.post("/auth/login", user);
+
 export default API;
